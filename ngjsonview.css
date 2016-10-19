@@ -1,0 +1,7 @@
+pre.jsonview{ outline:1px solid #373b41; overflow-x:hidden; margin:0;}
+pre.jsonview span.key{ color: #cc6666; }
+pre.jsonview span.string{ color: #b5bd68; }
+pre.jsonview span.number{ color: #de935f; }
+pre.jsonview span.sep{ color: #969896; }
+pre.jsonview span.boolean{ color: #81a2be; }
+pre.jsonview span.null{ color: #b294bb; }
