@@ -1,4 +1,4 @@
-/* ----====|| SUDDENSSchema DIRECTIVES ||====---- 
+
 angular.module("ngjsonview", ['suddenutils']).directive('ngjsoncollection',['$sce', function(){
 	'use strict';
 	return {
@@ -33,11 +33,9 @@ angular.module("ngjsonview", ['suddenutils']).directive('ngjsoncollection',['$sc
 					//TODO verify if it already exists in its converted form in the DOM
 					$scope.arrData.unshift($sce.trustAsHtml(fnPretty(v)));
 				});
-				$scope.$apply();
 			});
 
 		}
 	};
 	
 }]);
-*/
