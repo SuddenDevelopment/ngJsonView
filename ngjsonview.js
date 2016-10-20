@@ -1,4 +1,4 @@
-
+// https://plnkr.co/edit/kBoDTXmm2XbxXjpDA4M9?p=preview
 angular.module("ngjsonview", ['suddenutils']).directive('ngjsoncollection',['$sce', function(){
 	'use strict';
 	return {
@@ -25,15 +25,15 @@ angular.module("ngjsonview", ['suddenutils']).directive('ngjsoncollection',['$sc
 			    });
 			};
 
-			$scope.html=$sce.trustAsHtml(fnPretty($scope.d));
-
-			$scope.$watchCollection('d',function(newValue){
+			var fnConvertCollection = function(arrJson){
 				$scope.arrData=[];
-				_.for(newValue,function(v,k){
+				_.for(arrJson,function(v,k){
 					//TODO verify if it already exists in its converted form in the DOM
 					$scope.arrData.unshift($sce.trustAsHtml(fnPretty(v)));
 				});
-			});
+			}
+			
+			$scope.$watchCollection('d',fnConvertCollection);
 
 		}
 	};
